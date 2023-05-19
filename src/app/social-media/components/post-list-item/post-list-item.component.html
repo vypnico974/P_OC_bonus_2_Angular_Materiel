@@ -1,7 +1,10 @@
 <mat-card>
     <mat-card-header>
       <mat-card-title>
-        <span>{{ post.title | titlecase }}</span>
+        <!-- <span highlight>{{ post.title | titlecase }}</span> -->
+        <!-- <span highlight color="blue">{{ post.title | titlecase }}</span> -->
+        <!-- <span highlight="lightblue">{{ post.title | titlecase }}</span> -->
+        <span highlight color="lightblue">{{ post.title | titlecase }}</span>
       </mat-card-title>
       <mat-card-subtitle>
         <span>{{ tempUser | username }}</span>
@@ -20,7 +23,9 @@
       <app-comments [comments]="post.comments"></app-comments>
     </mat-card-actions> -->
     <mat-card-actions>
-      <app-comments [comments]="post.comments" (newComment)="onNewComment($event)"></app-comments>
+      <app-comments [comments]="post.comments" (newComment)="onNewComment($event)">
+      </app-comments>
+           
   </mat-card-actions>
 
 </mat-card>
